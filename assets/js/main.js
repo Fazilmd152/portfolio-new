@@ -39,10 +39,12 @@ function project() {
     for (i = 1; i < 7; i++) {
         const div = document.createElement('div');
         const img = document.createElement('img');
+        const h3 = document.createElement('h3');
+        h3.innerText='hello world'
         div.className = 'work_img';
         img.src = `./assets/img/work${i}.jpg`;
         const btnDiv=getBtn()
-        div.append(img,btnDiv);
+        div.append(img,btnDiv,h3);
         work.appendChild(div);
     }
 }
@@ -52,7 +54,7 @@ function getBtn() {
     const div = document.createElement('div');
     const btn1 = document.createElement('button')
     const btn2 = document.createElement('button')
-    div.className = 'project'
+    div.className = 'project_button'
     btn1.className = 'button1'
     btn2.className = 'button1'
     btn1.innerText = "Live demo"
